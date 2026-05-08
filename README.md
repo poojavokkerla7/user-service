@@ -21,39 +21,39 @@ Architecture
 API Endpoints
 
 Authentication
-POST /auth/login
+POST /auth/login  
 Generate JWT token using username, password, and role
 
 Users
-GET /users
+GET /users  
 Accessible only by USER role
 
 Messaging
-POST /kafka/send
+POST /kafka/send  
 Send message using Kafka producer simulation
 
 Tech Stack
-Java 17
-Spring Boot
-Spring Security
-JPA and Hibernate
-MySQL
-Kafka (simulated)
+- Java 17
+- Spring Boot
+- Spring Security
+- JPA and Hibernate
+- MySQL
+- Kafka (simulated)
 
 How to Run
 
-1. Clone the repository
-git clone https://github.com/poojavokkerla7/user-service.git
+1. Clone the repository  
+git clone https://github.com/poojavokkerla7/user-service.git  
 
-2. Navigate to project
-cd user-service
+2. Navigate to project  
+cd user-service  
 
-3. Configure MySQL in application.properties
+3. Configure MySQL in application.properties  
 
-4. Run the application
-./mvnw spring-boot:run
+4. Run the application  
+./mvnw spring-boot:run  
 
-5. Test APIs using Postman
+5. Test APIs using Postman  
 
-Author
+Author  
 Pooja Vokkerla
