@@ -19,7 +19,7 @@ public class AuthController {
         return userRepository.save(user);
     }
 
-    // ✅ LOGIN
+    // ✅ LOGIN (FIXED)
     @PostMapping("/login")
     public String login(@RequestBody User user) {
 
@@ -34,6 +34,7 @@ public class AuthController {
             return "Invalid credentials";
         }
 
-        return jwtUtil.generateToken(user.getUsername());
+        // 🔥 FIXED LINE (username + role)
+        return jwtUtil.generateToken(dbUser.getUsername(), dbUser.getRole());
     }
 }
