@@ -1,59 +1,64 @@
-User Service - Week 7 Spring Boot Backend
+# User Service - Week 8 Final Project
 
-Overview
-This project implements a secure backend system using Spring Boot with JWT authentication, role-based authorization, and messaging integration. It demonstrates how to build enterprise-level REST APIs with security and asynchronous communication patterns.
+## Overview
+This project implements a secure backend system using Spring Boot with REST APIs, JWT authentication, and cloud deployment. It demonstrates enterprise-level backend development with containerization and CI/CD integration.
 
-Features
-- JWT-based authentication for secure login
-- Role-based authorization using USER and ADMIN roles
-- Secure REST APIs using Spring Security
-- MySQL database integration using JPA and Hibernate
-- Messaging system using Kafka pattern (simulated producer-consumer)
-- API testing using Postman
+---
 
-Architecture
-- Controller layer for handling HTTP requests
-- Service layer for business logic
-- Repository layer for database operations
-- Security layer using JWT and Spring Security filters
-- Messaging layer using producer-consumer pattern
+## 🚀 Live Application
+https://user-service-xxtq.onrender.com/users
 
-API Endpoints
+---
 
-Authentication
-POST /auth/login  
-Generate JWT token using username, password, and role
+## 🔧 Features
+- REST APIs (CRUD operations)
+- User creation and retrieval
+- JWT-based authentication (login/register)
+- Dockerized application
+- Cloud deployment using Render
+- CI/CD using GitHub integration
+- H2 in-memory database
 
-Users
-GET /users  
-Accessible only by USER role
+---
 
-Messaging
-POST /kafka/send  
-Send message using Kafka producer simulation
+## 🏗️ Architecture
+Client (Postman)
+        ↓
+Spring Boot Application (Render Cloud)
+        ↓
+H2 Database (In-memory)
 
-Tech Stack
+---
+
+## 📡 API Endpoints
+
+### Users
+- GET /users → Get all users
+- GET /users/{id} → Get user by ID
+- POST /users → Create user
+- PUT /users/{id} → Update user
+- DELETE /users/{id} → Delete user
+
+### Authentication
+- POST /auth/register → Register user
+- POST /auth/login → Login and get JWT token
+
+---
+
+## 🛠️ Tech Stack
 - Java 17
 - Spring Boot
-- Spring Security
-- JPA and Hibernate
-- MySQL
-- Kafka (simulated)
+- Spring Data JPA
+- H2 Database
+- Docker
+- Render (Cloud Deployment)
+- GitHub (CI/CD)
 
-How to Run
+---
 
-1. Clone the repository  
-git clone https://github.com/poojavokkerla7/user-service.git  
+## ▶️ How to Run Locally
 
-2. Navigate to project  
-cd user-service  
-
-3. Configure MySQL in application.properties  
-
-4. Run the application  
-./mvnw spring-boot:run  
-
-5. Test APIs using Postman  
-
-Author  
-Pooja Vokkerla
+```bash
+git clone https://github.com/poojavokkerla7/user-service.git
+cd user-service
+./mvnw spring-boot:run
