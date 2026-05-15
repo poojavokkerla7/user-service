@@ -12,7 +12,7 @@ public class JwtUtil {
     public String generateToken(String username, String role) {
         return Jwts.builder()
                 .setSubject(username)
-                .claim("role", role)
+                .claim("role", role) // ✅ store role
                 .signWith(Keys.hmacShaKeyFor(SECRET.getBytes()))
                 .compact();
     }

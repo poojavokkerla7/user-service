@@ -10,15 +10,10 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserRepository repo;
+    private UserRepository userRepository;
 
     @GetMapping
     public List<User> getUsers() {
-        return repo.findAll();
-    }
-
-    @PostMapping("/register")
-    public User register(@RequestBody User user) {
-        return repo.save(user);
+        return userRepository.findAll(); // ✅ safe
     }
 }

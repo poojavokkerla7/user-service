@@ -43,6 +43,7 @@ public class JwtFilter extends OncePerRequestFilter {
                 String username = claims.getSubject();
                 String role = claims.get("role", String.class);
 
+                // ✅ FIX: ROLE_ prefix added
                 UsernamePasswordAuthenticationToken authToken =
                         new UsernamePasswordAuthenticationToken(
                                 username,
