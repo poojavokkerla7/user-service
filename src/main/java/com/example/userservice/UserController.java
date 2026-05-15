@@ -18,9 +18,29 @@ public class UserController {
         return userRepository.findAll();
     }
 
+    // ✅ GET user by ID
+    @GetMapping("/{id}")
+    public User getUserById(@PathVariable Long id) {
+        return userRepository.findById(id).orElse(null);
+    }
+
     // ✅ POST create user
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
+    }
+
+    // ✅ PUT update user
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody User user) {
+        user.setId(id);
+        return userRepository.save(user);
+    }
+
+    // ✅ DELETE user
+    @DeleteMapping("/{id}")
+    public String deleteUser(@PathVariable Long id) {
+        userRepository.deleteById(id);
+        return "User deleted";
     }
 }
