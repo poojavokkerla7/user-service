@@ -5,12 +5,12 @@ This project implements a secure backend system using Spring Boot with REST APIs
 
 ---
 
-## 🚀 Live Application
+## Live Application
 https://user-service-xxtq.onrender.com/users
 
 ---
 
-## 🔧 Features
+## Features
 - REST APIs (CRUD operations)
 - User creation and retrieval
 - JWT-based authentication (login/register)
@@ -21,7 +21,7 @@ https://user-service-xxtq.onrender.com/users
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 Client (Postman)
         ↓
 Spring Boot Application (Render Cloud)
@@ -30,7 +30,7 @@ H2 Database (In-memory)
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Users
 - GET /users → Get all users
@@ -45,7 +45,7 @@ H2 Database (In-memory)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - Java 17
 - Spring Boot
 - Spring Data JPA
@@ -56,7 +56,7 @@ H2 Database (In-memory)
 
 ---
 
-## ▶️ How to Run Locally
+## How to Run Locally
 
 ```bash
 git clone https://github.com/poojavokkerla7/user-service.git
