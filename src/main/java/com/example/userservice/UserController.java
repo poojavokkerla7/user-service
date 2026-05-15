@@ -12,13 +12,13 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    // ✅ GET API
+    // ✅ GET all users
     @GetMapping
-    public List<User> getUsers() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    // ✅ ADD THIS (POST API)
+    // ✅ POST create user
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
