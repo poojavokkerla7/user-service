@@ -1,5 +1,6 @@
-HELP.md
-target/
+### IMPORTANT: DO NOT IGNORE TARGET FOR DOCKER ###
+# target/   <-- commented so JAR is included in Git
+
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
