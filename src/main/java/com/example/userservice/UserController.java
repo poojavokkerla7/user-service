@@ -12,8 +12,15 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    // ✅ GET API
     @GetMapping
     public List<User> getUsers() {
-        return userRepository.findAll(); // ✅ safe
+        return userRepository.findAll();
+    }
+
+    // ✅ ADD THIS (POST API)
+    @PostMapping
+    public User createUser(@RequestBody User user) {
+        return userRepository.save(user);
     }
 }
