@@ -55,24 +55,15 @@ https://user-service-xxtq.onrender.com/users
 
 ## 🧠 Architecture
 
-┌──────────────────────┐
-│  Client (Postman/UI) │
-└──────────┬───────────┘
-           ↓
-           
-┌──────────────────────┐
-│   Controller Layer   │
-└──────────┬───────────┘
-           ↓
-           
-┌──────────────────────┐
-│    Service Layer     │
-└──────────┬───────────┘
-           ↓
-           
-┌──────────────────────┐
-│  Repository Layer    │
-└──────────┬───────────┘
+Client (Browser / Postman)
+        ↓
+Spring Boot Controller Layer
+        ↓
+Service Layer (Business Logic)
+        ↓
+Repository Layer (JPA)
+        ↓
+H2 Database (In-Memory)
            ↓
            
 ┌──────────────────────┐
