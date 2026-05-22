@@ -1,64 +1,76 @@
-# User Service - Week 8 Final Project
+# 🚀 User Service - Week 9 Final Project
 
-## Overview
-This project implements a secure backend system using Spring Boot with REST APIs, JWT authentication, and cloud deployment. It demonstrates enterprise-level backend development with containerization and CI/CD integration.
+## 📌 Overview
+This project is a cloud-deployed backend application built using Spring Boot. It provides REST APIs for user management with authentication, caching, and clean architecture. The application is containerized using Docker and deployed on Render with CI/CD integration.
 
 ---
 
-## Live Application
+## 🌐 Live Application
 https://user-service-xxtq.onrender.com/users
 
 ---
 
-## Features
-- REST APIs (CRUD operations)
-- User creation and retrieval
-- JWT-based authentication (login/register)
-- Dockerized application
-- Cloud deployment using Render
-- CI/CD using GitHub integration
-- H2 in-memory database
+## 🛠️ Tech Stack
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- Spring Security (JWT)
+- H2 Database (in-memory)
+- Docker
+- Render (Cloud Deployment)
+- GitHub (CI/CD)
+- JUnit & Mockito (Unit Testing)
+- Spring Cache
 
 ---
 
-## Architecture
-Client (Postman)
-        ↓
-Spring Boot Application (Render Cloud)
-        ↓
-H2 Database (In-memory)
+## ⚙️ Features
 
----
-
-## API Endpoints
-
-### Users
+### 🔹 User APIs
 - GET /users → Get all users
 - GET /users/{id} → Get user by ID
 - POST /users → Create user
 - PUT /users/{id} → Update user
 - DELETE /users/{id} → Delete user
 
-### Authentication
+### 🔹 Authentication APIs
 - POST /auth/register → Register user
-- POST /auth/login → Login and get JWT token
+- POST /auth/login → Login and receive JWT token
 
 ---
 
-## Tech Stack
-- Java 17
-- Spring Boot
-- Spring Data JPA
-- H2 Database
-- Docker
-- Render (Cloud Deployment)
-- GitHub (CI/CD)
+## 🔐 Security
+- JWT-based authentication implemented
+- Protected endpoints using Spring Security
+- Stateless session management
 
 ---
 
-## How to Run Locally
+## ⚡ Performance Optimization
+- Optimized database queries using repository methods
+- Implemented caching using Spring Cache
+- Reduced repeated database calls for GET APIs
 
-```bash
-git clone https://github.com/poojavokkerla7/user-service.git
-cd user-service
-./mvnw spring-boot:run
+---
+
+## 🧠 Architecture
+
+┌──────────────────────┐
+│  Client (Postman/UI) │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│   Controller Layer   │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│    Service Layer     │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│  Repository Layer    │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│    H2 Database       │
+└──────────────────────┘
