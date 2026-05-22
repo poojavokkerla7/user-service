@@ -9,10 +9,12 @@
     <artifactId>user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
+    <!-- ✅ Spring Boot Parent -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.0</version>
+        <relativePath/>
     </parent>
 
     <properties>
@@ -33,20 +35,20 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- ✅ H2 -->
+        <!-- ✅ H2 Database -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- 🔥 ADD THIS (YOU MISSED THIS) -->
+        <!-- 🔐 Spring Security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <!-- 🔥 CORRECT JWT (NEW VERSION) -->
+        <!-- 🔥 JWT (Correct Version) -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
@@ -67,8 +69,22 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- 🚀 CACHING (WEEK 9 IMPORTANT) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
+        <!-- 🧪 TESTING -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
+    <!-- ✅ BUILD -->
     <build>
         <plugins>
             <plugin>
