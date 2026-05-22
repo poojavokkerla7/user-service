@@ -19,22 +19,18 @@ public class AuthController {
         return userRepository.save(user);
     }
 
-    // ✅ LOGIN (FIXED)
+    // ✅ LOGIN (OPTIMIZED - NO findAll, direct DB query)
     @PostMapping("/login")
     public String login(@RequestBody User user) {
 
-        User dbUser = userRepository.findAll()
-                .stream()
-                .filter(u -> u.getUsername().equals(user.getUsername())
-                        && u.getPassword().equals(user.getPassword()))
-                .findFirst()
+        User dbUser = userRepository
+                .findByUsernameAndPassword(user.getUsername(), user.getPassword())
                 .orElse(null);
 
         if (dbUser == null) {
             return "Invalid credentials";
         }
 
-        // 🔥 FIXED LINE (username + role)
         return jwtUtil.generateToken(dbUser.getUsername(), dbUser.getRole());
     }
 }
