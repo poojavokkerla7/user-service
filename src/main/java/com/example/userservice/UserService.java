@@ -11,6 +11,8 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    // BUSINESS LOGIC LAYER
+
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
